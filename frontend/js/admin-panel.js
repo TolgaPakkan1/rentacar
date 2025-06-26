@@ -104,7 +104,7 @@ async function fillForm(id) {
 }
 
 async function loadActiveRentals() {
-  const res = await fetch("http://localhost:5000/api/rentals/active", {
+  const res = await fetch("http://localhost:5000/api/auth/login", {
     headers: {
       Authorization: "Bearer " + token
     }

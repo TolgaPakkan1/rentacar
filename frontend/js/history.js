@@ -8,7 +8,7 @@ async function fetchActiveRentals() {
     return;
   }
 
-  const res = await fetch("http://localhost:5000/api/rentals/user", {
+  const res = await fetch("http://localhost:5000/api/auth/login", {
     headers: {
       Authorization: "Bearer " + token
     }
