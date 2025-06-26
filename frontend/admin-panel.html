@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="js/admin-panel.js" defer></script>
+</head>
+<body>
+<h2>Admin Panel</h2>
+
+<button onclick="logout()">Çıkış Yap</button>
+
+<h3>Yeni Araç Ekle / Güncelle</h3>
+
+<input type="hidden" id="carId">
+
+<label for="brand">Marka:</label>
+<input type="text" id="brand" placeholder="Marka">
+
+<label for="model">Model:</label>
+<input type="text" id="model" placeholder="Model">
+
+<label for="year">Yıl:</label>
+<input type="number" id="year" placeholder="Yıl">
+
+<label for="transmission">Vites:</label>
+<input type="text" id="transmission" placeholder="Vites">
+
+<label for="color">Renk:</label>
+<input type="text" id="color" placeholder="Renk">
+
+<label for="km">Kilometre:</label>
+<input type="number" id="km" placeholder="Kilometre">
+
+<label for="dailyPrice">Günlük Ücret:</label>
+<input type="number" id="dailyPrice" placeholder="Günlük Ücret">
+
+<label for="availableCount">Stok:</label>
+<input type="number" id="availableCount" placeholder="Stok">
+
+<label for="image">Görsel Dosya Adı:</label>
+<input type="text" id="image" placeholder="Görsel dosya adı">
+
+<button onclick="submitCar()">Kaydet</button>
+<p id="addResult" style="color: green;"></p>
+
+<h3>Mevcut Araçlar</h3>
+<div id="carList"></div>
+
+<h3>Aktif Kiralamalar</h3>
+<div id="rentalList"></div>
+</body>
+</html>

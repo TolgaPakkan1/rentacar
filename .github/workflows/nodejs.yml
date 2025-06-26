@@ -1,0 +1,32 @@
+name: Rent a Car CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Kodları çek
+        uses: actions/checkout@v3
+
+      - name: Node.js kurulumu
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Bağımlılıkları yükle
+        working-directory: backend
+        run: npm install
+
+      - name: (İsteğe bağlı) Test çalıştır
+        working-directory: backend
+        run: echo "npm test yoksa burası boş bırakılabilir"
+
+      - name: Docker image oluştur
+        working-directory: backend
+        run: docker build -t rentacar-api .

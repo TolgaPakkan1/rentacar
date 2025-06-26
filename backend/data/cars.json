@@ -1,0 +1,41 @@
+[
+  {
+    "id": 7,
+    "brand": "BMW",
+    "model": "530i",
+    "year": 2022,
+    "transmission": "Automatic",
+    "color": "Blue",
+    "km": 18000,
+    "dailyPrice": 950,
+    "availableCount": 4,
+    "image": "bmw.jpg.png",
+    "isActive": true
+  },
+  {
+    "id": 2,
+    "brand": "mercedes",
+    "model": "cla",
+    "year": 2024,
+    "transmission": "hibrit",
+    "color": "pembe",
+    "km": 0,
+    "dailyPrice": 6000,
+    "availableCount": 1,
+    "image": "ChatGPT Image 26 Haz 2025 18_40_45.png",
+    "isActive": true
+  },
+  {
+    "id": 3,
+    "brand": "Audi",
+    "model": "A6",
+    "year": 2023,
+    "transmission": "Automatic",
+    "color": "Gray",
+    "km": 12,
+    "dailyPrice": 950,
+    "availableCount": 2,
+    "image": "ChatGPT Image 26 Haz 2025 19_49_49.png",
+    "isActive": true
+  }
+]

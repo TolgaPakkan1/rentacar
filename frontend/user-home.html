@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8" />
+    <title>Araçlar</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="container">
+    <h2>Araçlar</h2>
+    <button onclick="logout()">Çıkış Yap</button>
+    <p><a href="history.html">Kiralama Geçmişim</a></p>
+
+    <label for="brandFilter">Marka Seç:</label>
+    <select id="brandFilter">
+        <option value="">Tüm Markalar</option>
+    </select>
+
+    <div id="carList" class="car-list"></div>
+</div>
+
+<div id="rentModal" class="modal" style="display:none;">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h3><span id="modalBrand"></span> <span id="modalModel"></span></h3>
+        <p>Günlük Fiyat: <span id="modalDailyPrice"></span>₺</p>
+
+        <input type="hidden" id="rentalCarId" />
+
+        <label for="startDate">Başlangıç Tarihi:</label>
+        <input type="date" id="startDate" name="startDate" />
+
+        <label for="endDate">Bitiş Tarihi:</label>
+        <input type="date" id="endDate" name="endDate" /><br>
+
+        <label for="pickupLocation">Alış Noktası:</label>
+        <input type="text" id="pickupLocation" name="pickupLocation" placeholder="Alış Noktası" /><br>
+
+        <label for="dropoffLocation">Teslim Noktası:</label>
+        <input type="text" id="dropoffLocation" name="dropoffLocation" placeholder="Teslim Noktası" /><br>
+
+        <button onclick="calculatePrice()">Fiyat Hesapla</button>
+        <p id="rentalResult"></p>
+        <button onclick="rentCar()">Kirala</button>
+    </div>
+</div>
+
+<script src="js/user-home.js"></script>
+</body>
+</html>
